@@ -33,7 +33,7 @@ $secondaryColor: #887de7;
     z-index: 2;
     top: 70px;
     display: none;
-    left: 70px;
+    left: 50px;
 }
 .alignDiv:hover .btnOverlay {
     display: block;
@@ -42,6 +42,7 @@ $secondaryColor: #887de7;
 .btnOverlay {
     .mB10 {
         margin-bottom: 1em;
+        margin-right:1em
     }
 }
 .btnOverlay {
