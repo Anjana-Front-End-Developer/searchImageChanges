@@ -1,0 +1,21 @@
+<button [routerLink]="['/searchimages']" mat-raised-button color="primary">Back to home</button>
+<div class="container mT1em">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let obj of lists;let i = index; first as isFirst" (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false" [expanded]="isFirst">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{obj.name}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="mT1em">
+                <p style="display: inline-flex;">Title: <span><input matInput type="text" ngModel="{{obj.name}}" value="{{obj.name}}" [disabled]></span></p> 
+                <p style="display: inline-flex;">Descriiption: <span><input matInput type="text" ngModel="{{obj.desc}}" value="{{obj.desc}}" [disabled]></span> 
+                <button (click)="edit(i,obj)" mat-raised-button color="primary">Edit Details</button>
+            </div>
+            <div class="col-4" *ngFor="let obj1 of obj.value">
+                <img src="{{obj1.urls.small}}" (click)="downloadImage(obj1)" class="size">
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

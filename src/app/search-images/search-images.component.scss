@@ -1,0 +1,55 @@
+$white: #b3c2de;
+
+$primaryColor: #5347c5;
+$secondaryColor: #887de7;
+
+
+.mT10 {
+    margin-top: 2em;
+    margin-left: -35em;
+}
+
+.imageAlign {
+    height:200px; 
+    width:300px;
+    padding: 0.5em;
+}
+
+.btnStyle {
+    background-color: $primaryColor;
+    color: $white;
+}
+.btnSecCol {
+    background-color: $secondaryColor;
+    color: $white;
+}
+.alignDiv {
+    margin: 0px 15px 5px 0px;
+    border-radius: 5px;
+}
+
+.btnOverlay {
+    position: absolute;
+    z-index: 2;
+    top: 70px;
+    display: none;
+    left: 70px;
+}
+.alignDiv:hover .btnOverlay {
+    display: block;
+}
+
+.btnOverlay {
+    .mB10 {
+        margin-bottom: 1em;
+    }
+}
+.btnOverlay {
+    .btn {
+        width: 120px;
+        line-height: 30px;
+    }
+    .btn:first-child {
+        margin-bottom: 2em;
+    }
+}

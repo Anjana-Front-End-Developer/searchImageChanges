@@ -1,0 +1,7 @@
+<div>
+  <input class="mB1em" matInput [(ngModel)]="editList.name" value="{{editList.name}}" placeholder="Enter List Name"
+    required> <br />
+  <input class="mB1em" matInput [(ngModel)]="editList.desc" value="{{editList.desc}}" placeholder="Enter List Desc"
+    required> <br />
+  <button mat-raised-button color="primary" (click)="updateList()">Update List</button>
+</div>

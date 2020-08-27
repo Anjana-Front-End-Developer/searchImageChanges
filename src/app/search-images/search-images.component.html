@@ -1,0 +1,28 @@
+  <div class="row">
+    <div class="pull-right">
+      <mat-form-field class="example-form-field">
+        <mat-label>Search for images on Unsplash</mat-label>
+        <input matInput type="text" [(ngModel)]="searchQuery" name="searchQuery" (keyup)="searchImagesFromunSplash(searchQuery)">
+        <button mat-button *ngIf="searchQuery" matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="primary" [routerLink]="['/favoritesimages']">Check out Favorities</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mT10">
+    <div class="col-3 alignDiv" *ngFor="let image of response; let i=index;">
+      <div class="card">
+        <div class="card-block">
+          <img src='{{image.urls.small}}' class="rounded imageAlign "
+            (mouseover)="onhover(image)" />
+          <div class="btnOverlay">
+            <button mat-raised-button color="primary" class="mB10" (click)="addToFavourites(image)" [disabled]="disableBtn">Add To Favourites</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
