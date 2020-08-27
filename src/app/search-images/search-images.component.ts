@@ -52,7 +52,13 @@ export class SearchImagesComponent implements OnInit {
       });
     });
   }
-
+openauthorPage(image) {
+    if (image.user.portfolio_url != null) {
+      window.open(image.user.portfolio_url);
+    } else {
+      alert("author page deatils not available")
+    }
+  }
   onhover(obj) {
     this.getImagesFromStore();
     if (this.storeValues['cart'].length != 0) {
